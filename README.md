@@ -19,14 +19,18 @@ source env/bin/activate
 ### 学習用データ (train.csv)
 ### テスト用データ (test.csv)
 
-```text
-   id  age           job  marital  education default  balance  ... month duration campaign  pdays previous  poutcome  y
-0   0   31      services  married  secondary      no    12294  ...   nov      101        3    498        0     other  0
-1   1   29  entrepreneur   single   tertiary      no    43027  ...   aug      158        2    702        0   unknown  1
-2   2   35    management  married   tertiary      no    12252  ...   nov      351        1    826        0   failure  0
-3   3   31    technician  married  secondary      no    99121  ...   may      658        2    120        0   failure  0
-4   4   48    unemployed  married    primary      no    42005  ...   apr      177        1    273        0   unknown  0
-```
+| |id|age|job|marital|education|default|balance|housing|loan|contact|day|month|duration|campaign|pdays|previous|poutcome|y|
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+|0|0|31|services|married|secondary|no|12294|yes|no|cellular|21|nov|101|3|498|0|other|0|
+|1|1|29|entrepreneur|single|tertiary|no|43027|no|no|cellular|22|aug|158|2|702|0|unknown|1|
+|2|2|35|management|married|tertiary|no|12252|yes|no|cellular|11|nov|351|1|826|0|failure|0|
+|3|3|31|technician|married|secondary|no|99121|yes|yes|unknown|16|may|658|2|120|0|failure|0|
+|4|4|48|unemployed|married|primary|no|42005|yes|no|telephone|3|apr|177|1|273|0|unknown|0|
+
+[変換ツール](https://markdown-convert.com/ja/tool/table)
+
+train.csv には y の結果がない
+
 
 ![train.csvの説明](picture/train_explain.png)
 
