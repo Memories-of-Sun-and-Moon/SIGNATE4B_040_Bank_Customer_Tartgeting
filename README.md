@@ -29,9 +29,53 @@ source env/bin/activate
 
 [変換ツール](https://markdown-convert.com/ja/tool/table)
 
-train.csv には y の結果がない
-
+```python
+job = ['services' 'entrepreneur' 'management' 'technician' 'unemployed' 'blue-collar' 'admin.' 'retired' 'self-employed' 'housemaid' 'student']
+marital = ['married' 'single' 'divorced']
+education = ['secondary' 'tertiary' 'primary' 'unknown']
+default = ['no' 'yes']
+housing = ['yes' 'no']
+loan = ['no' 'yes']
+contact = ['cellular' 'unknown' 'telephone']
+month = ['nov' 'aug' 'may' 'apr' 'sep' 'jun' 'jul' 'feb' 'oct' 'jan' 'mar']
+poutcome = ['other' 'unknown' 'failure' 'success']
+```
 
 ![train.csvの説明](picture/train_explain.png)
 
+train.csv には y の結果がない
+
+![可視化のリンク](https://qiita.com/TaigoKuriyama/items/fccc5dd31326051d1d19) を見ながら異論値を可視化してみたり、検証してみたりしている。
+
+```sh
+27100 rows and 18 features in train set
+18050 rows and 17 features in test set
+```
+
+欠損値は存在しなかった。
+
+
+| |id|age|balance|day|duration|campaign|pdays|previous|y|
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+|count|27100.000000|27100.000000|27100.000000|27100.000000|27100.000000|27100.000000|27100.000000|27100.000000|27100.000000|
+|mean|13549.500000|36.073284|47682.901771|16.747528|229.325387|1.775830|432.482399|0.085720|0.077934|
+|std|7823.240484|7.816417|31650.760036|8.569529|204.939958|0.950045|252.150648|0.365889|0.268072|
+|min|0.000000|22.000000|-6847.000000|1.000000|0.000000|1.000000|-1.000000|0.000000|0.000000|
+|25%|6774.750000|31.000000|20015.750000|8.000000|121.000000|1.000000|214.000000|0.000000|0.000000|
+|50%|13549.500000|33.000000|47624.000000|17.000000|158.000000|1.000000|432.000000|0.000000|0.000000|
+|75%|20324.250000|37.000000|75330.000000|26.000000|345.000000|2.000000|650.000000|0.000000|0.000000|
+|max|27099.000000|90.000000|102121.000000|31.000000|3076.000000|5.000000|870.000000|3.000000|1.000000|
+
+- pdays が負の値を取ることはあるのだろうか
+
 ### 投稿用ファイル (submit_sample.csv)
+
+| |0|0.1|
+|:----|:----|:----|
+|0|1|0|
+|1|2|0|
+|2|3|0|
+|3|4|0|
+|4|5|0|
+
+$1$ か $0$ かを出せばいいことを行っているだけのサンプル
