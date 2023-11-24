@@ -45,7 +45,7 @@ poutcome = ['other' 'unknown' 'failure' 'success']
 
 train.csvには $y$ の結果がない
 
-![可視化のリンク](https://qiita.com/TaigoKuriyama/items/fccc5dd31326051d1d19) を見ながら異論値を可視化してみたり、検証してみたりしている。
+[可視化のリンク](https://qiita.com/TaigoKuriyama/items/fccc5dd31326051d1d19) を見ながら異論値を可視化してみたり、検証してみたりしている。
 
 ```sh
 27100 rows and 18 features in train set
